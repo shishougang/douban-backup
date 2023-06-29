@@ -76,6 +76,8 @@ async function main() {
   const allFeeds = [];
 
   feeds.forEach((item) => {
+    console.log('item ${item.title}  ${item.link}');
+
     const { category, id, status } = extractItemInfo(item.title, item.link);
     const dom = new JSDOM(item.content.trim());
     const contents = [...dom.window.document.querySelectorAll('td p')];
