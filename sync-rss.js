@@ -54,7 +54,7 @@ const dramaDBID = process.env.NOTION_DRAMA_DATABASE_ID;
 const neodbToken = process.env.NEODB_API_TOKEN;
 
 async function main() {
-  console.log('Refreshing feeds from RSS...');
+  console.log('##Refreshing feeds from RSS...');
   let feeds;
   try {
     feeds = await parser.parseURL(
